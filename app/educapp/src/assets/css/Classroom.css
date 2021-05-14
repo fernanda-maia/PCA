@@ -1,0 +1,65 @@
+.classroom-box {
+    width: 55rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    display: block;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -1px 0px 16px -3px rgba(0,0,0,0.47);
+}
+
+.article {
+    padding: 0 6rem;
+    overflow-y: scroll;
+    height: 45rem;
+
+}
+
+.article::-webkit-scrollbar {
+    width: 0.4rem;
+    background-color: #ff000048;
+}
+
+.article::-webkit-scrollbar-thumb {
+    background-color: #949494;
+    border-radius: 25rem;
+}
+
+.article > h1{
+    margin: 2rem 0;
+}
+.article > p {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.controls-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.controls-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.controls-btn:first-child {
+    margin-right: 1rem;
+} 
+
+.controls-btn:last-child {
+    margin-left: 1rem;
+}
+
+.controls-btn:first-child:hover {
+    transform: translateX(-2rem);
+}
+
+.controls-btn:last-child:hover {
+    transform: translateX(2rem);
+}

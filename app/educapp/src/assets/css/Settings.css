@@ -1,0 +1,44 @@
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 2.3rem 0;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+.input-color{
+    cursor: pointer;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.input-color::-webkit-color-swatch-wrapper {
+    padding: 0;	
+}
+
+.input-color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+.divider{
+    background-image: linear-gradient(to right, var(--bg-primary), var(--bg-secondary));
+    border: none;
+    height: 0.4rem;
+    animation: 1s progress 0s linear;
+}
+
+@keyframes progress {
+    from {
+        width: 60%;
+    }
+    to {
+        width: 100%;
+    }
+}

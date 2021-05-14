@@ -1,0 +1,32 @@
+:root {
+  --text-primary: #b6b6b6;
+  --text-secondary: #303030;
+  --bg-primary: #330748;
+  --bg-secondary: #ea1d63;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+  font-size: 20px;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rambla', sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    font-size: 20px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
