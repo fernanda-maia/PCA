@@ -1,6 +1,6 @@
 export const math = [
     {
-		status: false,
+		status: true,
         title: "Math 1",
         content: <>
 			<p>

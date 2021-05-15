@@ -1,3 +1,4 @@
+// FIXME
 import Img from '../assets/img/avatar.jpg';
 
 import React, {useContext} from 'react'

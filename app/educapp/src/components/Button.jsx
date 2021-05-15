@@ -12,7 +12,7 @@ export default function Button(props) {
                 <img src={props.img} alt={props.classroom} />
                 <h3>{props.classroom}</h3>
                 <span className="arrow">
-                    <img src="https://img.icons8.com/offices/80/000000/door-opened.png" alt="Enter"/>
+                    <img src={props.path} alt="Enter"/>
                 </span>
             </div>
         </ Link>

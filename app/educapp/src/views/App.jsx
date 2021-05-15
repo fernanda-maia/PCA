@@ -1,3 +1,4 @@
+// FIXME
 import '../assets/css/App.css';
 
 import React from 'react';

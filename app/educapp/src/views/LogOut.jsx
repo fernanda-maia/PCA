@@ -1,3 +1,4 @@
+// FIXME
 import '../assets/css/LogOut.css';
 import {Link} from 'react-router-dom'
 
