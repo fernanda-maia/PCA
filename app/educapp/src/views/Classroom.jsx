@@ -3,7 +3,7 @@ import '../assets/css/Classroom.css';
 
 import {useState, useEffect} from 'react'
 import Main from '../components/layout/Main';
-import Button from '../components/Controls';
+import Button from '../components/buttons/Controls';
 
 import {useIndex} from '../hooks/Controls'
 import {content} from '../data/articles'

@@ -1,5 +1,5 @@
 import React from 'react';
-import Tab from '../Tab';
+import Tab from '../buttons/Tab';
 
 import { faComment, faHome, faPen, faUserAlt, faCogs, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 

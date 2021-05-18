@@ -1,8 +1,8 @@
 // FIXME
-import Img from '../assets/img/avatar.jpg';
+import Img from '../../assets/img/avatar.jpg';
 
 import React, {useContext} from 'react'
-import {UserContext} from '../data/UserData'
+import {UserContext} from '../../data/UserData'
 
 export default function Form(props) {
     const {name, username, idNumber, email, birthday, password} = useContext(UserContext)

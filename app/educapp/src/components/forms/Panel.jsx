@@ -1,8 +1,8 @@
 // FIXME
-import '../assets/css/Settings.css';
+import '../../assets/css/Settings.css';
 
 import React, {useContext} from 'react'
-import {SettingsContext} from '../data/UserSettings'
+import {SettingsContext} from '../../data/UserSettings'
 
 export default function Panel (props) {
     const {bgColor, fontColor, languange} = useContext(SettingsContext)

@@ -1,0 +1,44 @@
+.question-box {
+    width: 70%;
+    align-self: center;
+    padding-top: 1rem;
+}
+
+.option:first-child {
+    text-transform: none;
+    margin-bottom: 5rem;
+    box-shadow: -1px 0px 16px -3px rgba(0,0,0,0.47);
+    font-size: 2.4rem;
+    font-weight: 600;
+    min-height: 10rem;
+    border: none;
+    cursor: unset;
+}
+
+.option:first-child::before {
+    content: url(https://img.icons8.com/dusk/64/fa314a/ask-question.png);
+}
+
+.option:first-child:hover {
+    background-color: #fff;
+    transform: translateX(0);
+}
+
+.option {
+    cursor: pointer;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    margin-top: 2rem;
+    border: 5px solid rgb(110, 110, 110);
+    transition: 0.5s;
+}
+
+.option::before {
+    content: url(https://img.icons8.com/doodle/48/fa314a/checked-checkbox.png);
+}
+
+.option:hover {
+    transform: scale(1.06, 1.06);
+    border-color: var(--bg-secondary);
+}

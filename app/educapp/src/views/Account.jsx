@@ -1,7 +1,7 @@
 import '../assets/css/Account.css';
 
 import Main from '../components/layout/Main';
-import Form from '../components/Form';
+import Form from '../components/forms/Form';
 
 export default function Account(props) {
 

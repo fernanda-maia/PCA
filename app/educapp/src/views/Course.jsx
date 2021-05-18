@@ -1,7 +1,7 @@
 import '../assets/css/Course.css';
 
 import Main from '../components/layout/Main';
-import Button from '../components/Button';
+import Button from '../components/buttons/Button';
 
 export default function Course(props) {
     const classroom = `/course/`

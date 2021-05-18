@@ -9,8 +9,12 @@ export default function Main(props) {
 
     return (
         <main className="main-content" style={{backgroundColor: bgColor, color: fontColor}}>
+            {props.section? 
             <Title title={props.section} color={props.sectionColor}
-                path={props.path} alt={props.section}/>
+                path={props.path} alt={props.section}/> :
+                null
+            }
+            
             {props.children}
         </main>
     );

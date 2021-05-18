@@ -1,6 +1,6 @@
 import Main from '../components/layout/Main';
 
-import Panel from '../components/Panel';
+import Panel from '../components/forms/Panel';
 
 export default function Settings(props) {
 
