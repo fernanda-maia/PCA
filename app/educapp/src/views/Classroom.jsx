@@ -1,5 +1,5 @@
 // FIXME  
-import '../assets/css/Classroom.css';
+import '../assets/css/Course.css';
 
 import {useState, useEffect} from 'react'
 import Main from '../components/layout/Main';

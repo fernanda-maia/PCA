@@ -1,4 +1,4 @@
-/*Main Styles*/
+/*Main*/
 .main-content {
     display: flex;
     flex-flow: row wrap;
@@ -26,7 +26,7 @@
     border-radius: 1rem;
 }
 
-/*Navbar Styles*/
+/*Navbar*/
 .navbar {
     height: 100vh;
     width: 5rem;
@@ -85,8 +85,8 @@
         font-weight: 500;
         letter-spacing: 2px;
     }
-
-/*Title Card Style*/    
+ 
+/*Title*/    
 .card {
     text-transform: capitalize;
     display: flex;
@@ -122,25 +122,26 @@
     color: #303030;
 }
 
-    .course-btn img {
-        width: 64px;
-    }
+        .course-btn img {
+            width: 64px;
+        }
 
-    .arrow {
-        display: flex;
-        justify-content: flex-end;
-        flex-grow: 1;
-    }
+        .arrow {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
 
-    .course-btn > h3 {
-        font-weight: normal;
-    }
+        .course-btn > h3 {
+            font-weight: normal;
+        }
 
-    .course-btn:hover {
-        transform: translateX(-2rem);
-        color: #b92b47;
-    }
+        .course-btn:hover {
+            transform: translateX(-2rem);
+            color: #b92b47;
+        }
 
+/*Modal*/    
 .alert {
     display: flex;
     flex-flow: column nowrap;
@@ -168,26 +169,26 @@
     }
 }
 
-.alert > p {
-    font-size: 2rem;
-}
+    .alert > p {
+        font-size: 2rem;
+    }
 
-.alert > button {
-    width: 50%;
-    min-width: fit-content;
-    cursor: pointer;
-    border: 5px solid #ffa600b2;
-    color: #ffa600;
-    background-color: #fff;
-    border-radius: 0.3rem;
-    font-size: 1.7rem;
-    padding: 0.5rem;
-    transition: 0.5s;
-}
+    .alert > button {
+        width: 50%;
+        min-width: fit-content;
+        cursor: pointer;
+        border: 5px solid #ffa600b2;
+        color: #ffa600;
+        background-color: #fff;
+        border-radius: 0.3rem;
+        font-size: 1.7rem;
+        padding: 0.5rem;
+        transition: 0.5s;
+    }
 
-.alert >button:hover {
-    background-color: #ffa600;
-    border-color: transparent;
-    color: #fff;
-}
+    .alert > button:hover {
+        background-color: #ffa600;
+        border-color: transparent;
+        color: #fff;
+    }
 

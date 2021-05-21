@@ -1,66 +1,65 @@
 // FIXME
-import '../assets/css/Activities.css'
+import '../assets/css/Lessons.css'
 
 import Image from '../assets/img/done.png'
 import Main from '../components/layout/Main'
 import Option from '../components/Option'
 import Modal from '../components/Modal'
 
-import {useState, useRef} from 'react'
+import {useRef} from 'react'
+import {useParams} from 'react-router-dom'
 import {useIndex, useStyle} from '../hooks/Controls'
 
 import {lessons} from '../data/questions'
-import {useParams} from 'react-router-dom'
 
 export default function Classroom(props) {
     const {id} = useParams()
-    const [modal, setModal] = useState({})
+    const score = useRef(0)
     const count = useRef(lessons[id].length)
     const [content, next] = useIndex(lessons[id])
 
     const [result, setResult] = useStyle({
-        path: {
-            true: 'https://img.icons8.com/bubbles/100/fa314a/happy.png',
-            false: 'https://img.icons8.com/bubbles/100/fa314a/sad.png'
+        true: {
+            path: 'https://img.icons8.com/bubbles/100/fa314a/happy.png',
+            result: 'Congratulations!',
         },
 
-        result: {
-            true: 'Congratulations!',
-            false: 'Wrong Answer!'
+        false: {
+            path: 'https://img.icons8.com/bubbles/100/fa314a/sad.png',
+            result: 'Wrong Answer!'
+        },
+
+        hidden: {
+            visibility: 'none',
         }
-    })
+
+    }, 'hidden')
 
     function checkAnswer(index) {
-        setResult(index === content.answer)
-        count.current--
+        let check = index === content.answer
 
-        setModal({
-            visibility: 'flex',
-            callback: () => {
-                next()
-                setModal({visibility: 'none'})
-            }  
-        })
+        setResult(check)
+        score.current += check
+        count.current--
+        next()
     }
     
     return (
          <Main>
-            <Modal {...modal} {...result} />
-
+            <Modal {...result} callback = {() => setResult('hidden')} />
             <div className="question-box">
-                {
-                    count.current > 0?
+                { count.current > 0?
                         <>
-                        <Option content={content.question}   />
+                            <Option content={content.question}   />
 
-                        { content.options.map((opt, i) => 
-                                <Option content ={opt} callback={() => checkAnswer(i)} key={i}/>)
-                        } 
+                            { content.options.map((opt, i) => 
+                                    <Option content ={opt} callback={() => checkAnswer(i)} key={i}/>)
+                            } 
                         </> :
 
                         <div className="wrapper">
                           <img src={Image} alt="Done" width="60%" />
-                          <h3>No more questions</h3>
+                          <span className = "score">SCORE: {score.current}</span>
                         </div>
                 }
 

@@ -18,16 +18,14 @@ export function useIndex(array, start = 0) {
     return [array[index], next, back, index]
 }
 
-/*Change style of an element according to the state*/
-export function useStyle(stylesheet, init = true) {
+/*Change style/content of a component according to the state*/
+export function useStyle(stylesheet, init) {
     const [state, setState] = useState(init)
-    let obj = {...stylesheet}
-    
-    Object.keys(stylesheet).map((key) => obj[key]= stylesheet[key][state])
+    let style = stylesheet[state]
 
     function setStyle(newState) {
         setState(newState)
     }
 
-    return [obj, setStyle]
+    return [style, setStyle]
 }

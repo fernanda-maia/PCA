@@ -2,7 +2,7 @@ import '../assets/css/App.css'
 
 export default function Modal(props) {
     const modalStyle = {
-        display: props.visibility || 'none'
+        display: props.visibility || 'flex'
     }
 
     return (
