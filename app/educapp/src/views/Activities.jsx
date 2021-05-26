@@ -18,22 +18,17 @@ export default function Classroom(props) {
     const count = useRef(lessons[id].length)
     const [content, next] = useIndex(lessons[id])
 
-    const [result, setResult] = useStyle({
-        true: {
-            path: 'https://img.icons8.com/bubbles/100/fa314a/happy.png',
-            result: 'Congratulations!',
+    const [result, setResult] = useStyle(
+        ["path", "result", "visibility"],
+
+        {
+            true: ['https://img.icons8.com/bubbles/100/fa314a/happy.png', 'Congratulations!', 'flex'],
+            false: ['https://img.icons8.com/bubbles/100/fa314a/sad.png', 'Wrong Answer!', 'flex'],
+            "hidden": [null, null, 'none']
         },
 
-        false: {
-            path: 'https://img.icons8.com/bubbles/100/fa314a/sad.png',
-            result: 'Wrong Answer!'
-        },
-
-        hidden: {
-            visibility: 'none',
-        }
-
-    }, 'hidden')
+        "hidden"    
+    )
 
     function checkAnswer(index) {
         let check = index === content.answer

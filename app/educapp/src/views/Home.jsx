@@ -4,14 +4,11 @@ import '../assets/css/Home.css'
 import Main from '../components/layout/Main';
 import Chart from '../components/cards/Chart';
 
-import React, {useContext} from 'react'
-import {UserContext} from '../data/UserData'
+import React from 'react'
 
 export default function Home(props) {
-    const {name} = useContext(UserContext)
-
     return (
-        <Main section={`Welcome, ${name}!`} sectionColor="#46335E" 
+        <Main section={`Welcome, ${null}!`} sectionColor="#46335E" 
                path="https://img.icons8.com/dusk/64/000000/work-from-home.png">
 
             <div className="wrapper">

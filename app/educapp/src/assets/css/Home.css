@@ -8,7 +8,7 @@
     background: #fff;
     box-shadow: -1px 0px 16px -3px rgba(0,0,0,0.47);
     margin: 5rem 2rem;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     text-align: center;
     font-size: 1.3rem;
     transition: 0.3s;
@@ -19,7 +19,6 @@
 }
 
 .chart {
-    position: relative;
     width: 13rem;
     height: 13rem;
     border-radius: 50%;
@@ -77,4 +76,5 @@
     width: 100%;
     padding: 1rem;
     color: #fff;
+    border-radius: 0 0 0.5rem 0.5rem;
 }

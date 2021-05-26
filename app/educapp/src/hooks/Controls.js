@@ -19,9 +19,11 @@ export function useIndex(array, start = 0) {
 }
 
 /*Change style/content of a component according to the state*/
-export function useStyle(stylesheet, init) {
+export function useStyle(keys, stylesheet, init) {
     const [state, setState] = useState(init)
-    let style = stylesheet[state]
+    let style = {}
+
+    keys.map((key, index) => style[key] = stylesheet[state][index])
 
     function setStyle(newState) {
         setState(newState)

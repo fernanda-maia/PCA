@@ -1,14 +1,10 @@
 // FIXME
 import Img from '../../assets/img/avatar.jpg';
 
-import React, {useContext} from 'react'
-import {UserContext} from '../../data/UserData'
+import React from 'react'
 
 export default function Form(props) {
-    const {name, username, idNumber, email, birthday, password} = useContext(UserContext)
-    const {setName, setUsername, setEmail, setBirthday, setPassword} = useContext(UserContext)
-
-
+    
     return (
         <div className="user-account">
             <form className="user-form">
@@ -19,38 +15,38 @@ export default function Form(props) {
 
                 <div className="form-group">
                     <label htmlFor="form-name">Full Name</label>
-                    <input type="text" value={name} id="form-name" onChange={(ev) => setName(ev.target.value)}
+                    <input type="text" value={null} id="form-name" onChange={null}
                         className="user-input"/>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="form-name">Username</label>
-                    <input type="text" value={username} id="form-username" 
-                        className="user-input" onChange={(ev) => setUsername(ev.target.value)}/>
+                    <input type="text" value={null} id="form-username" 
+                        className="user-input" onChange={null}/>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="form-id">ID Number</label>
-                    <input type="text" value={idNumber} id="form-id" 
+                    <input type="text" value={null} id="form-id" 
                         className="user-input" disabled/>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="form-email">Email</label>
-                    <input type="email" value={email} id="form-email" 
-                        className="user-input" onChange={(ev) => setEmail(ev.target.value)}/>
+                    <input type="email" value={null} id="form-email" 
+                        className="user-input" onChange={null}/>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="form-birth">Birthday</label>
-                    <input type="date" value={birthday} id="form-birth" 
-                        className="user-input" onChange={(ev) => setBirthday(ev.target.value)}/>
+                    <input type="date" value={null} id="form-birth" 
+                        className="user-input" onChange={null}/>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="form-pass">Password</label>
-                    <input type="password" value={password} id="form-pass" 
-                        className="user-input" onChange={(ev) => setPassword(ev.target.value)}/>
+                    <input type="password" value={null} id="form-pass" 
+                        className="user-input" onChange={null}/>
                 </div>
 
                 <div className="form-group">

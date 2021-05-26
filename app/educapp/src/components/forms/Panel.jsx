@@ -1,32 +1,29 @@
 // FIXME
 import '../../assets/css/Settings.css';
 
-import React, {useContext} from 'react'
-import {SettingsContext} from '../../data/UserSettings'
+import React from 'react'
 
 export default function Panel (props) {
-    const {bgColor, fontColor, languange} = useContext(SettingsContext)
-    const {setBackground, setColor} = useContext(SettingsContext)
 
     return (
         <div className = "user-account">
             <div className="list-item">
                 <span className="title-opt">Background Color: </span>
-                <input type="color" value={bgColor} className="input-color"
-                    onChange={(ev) => setBackground(ev.target.value)}/>
+                <input type="color" value={null} className="input-color"
+                    onChange={null}/>
             </div>
             <hr className="divider" />
 
             <div className="list-item">
                 <span className="title-opt">Font Color: </span>
-                <input type="color" value={fontColor} className="input-color"
-                    onChange={(ev) => setColor(ev.target.value)}/>
+                <input type="color" value={null} className="input-color"
+                    onChange={null}/>
             </div>
             <hr className="divider" />
 
             <div className="list-item">
                 <span className="title-opt">Language: </span>
-                <span>{languange}</span>
+                <span>{null}</span>
             </div>
         </div>
     );
