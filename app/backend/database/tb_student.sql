@@ -9,3 +9,5 @@ CREATE TABLE public.tb_student (
     CONSTRAINT pk_id PRIMARY KEY (id)
 
 );
+
+CREATE SEQUENCE hibernate_sequence START 1;
