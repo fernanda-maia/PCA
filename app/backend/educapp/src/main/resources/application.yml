@@ -5,4 +5,19 @@ server:
 
 springdoc:
   swagger-ui:
-    path: "/swagger-ui.html"
+    path: /swagger-ui.html
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    database-plataform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+

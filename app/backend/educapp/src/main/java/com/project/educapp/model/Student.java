@@ -1,33 +1,35 @@
 package com.project.educapp.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
-public class StudentDTO {
+@Entity
+@Table(name = "tb_student")
+public class Student {
 
+    @Id
+    @Column(name = "id")
     private Long id;
 
-    @NotNull
+    @Column(name = "registration")
     private String registration;
 
-    @NotNull
+    @Column(name = "name")
     private String name;
 
-    @NotNull
+    @Column(name = "username")
     private String username;
 
-    @NotNull
-    @Email
+    @Column(name = "email")
     private String email;
 
-    @NotNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "DD/MM/YYYY")
+    @Column(name = "birthday")
     private LocalDate birthday;
 
-    @NotNull
+    @Column(name = "password")
     private String password;
 
     public Long getId() {

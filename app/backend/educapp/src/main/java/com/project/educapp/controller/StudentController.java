@@ -1,6 +1,6 @@
 package com.project.educapp.controller;
 
-import com.project.educapp.model.StudentDTO;
+import com.project.educapp.model.dto.StudentDTO;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
