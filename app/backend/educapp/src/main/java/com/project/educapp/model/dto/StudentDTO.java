@@ -2,8 +2,7 @@ package com.project.educapp.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 public class StudentDTO {
@@ -13,13 +12,14 @@ public class StudentDTO {
     @NotNull
     private String registration;
 
-    @NotNull
+    @NotBlank
     private String name;
 
-    @NotNull
+    @NotBlank
+    @Size(min = 4)
     private String username;
 
-    @NotNull
+    @NotBlank
     @Email
     private String email;
 
@@ -27,7 +27,8 @@ public class StudentDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate birthday;
 
-    @NotNull
+    @NotBlank
+    @Size(min = 6)
     private String password;
 
     public Long getId() {

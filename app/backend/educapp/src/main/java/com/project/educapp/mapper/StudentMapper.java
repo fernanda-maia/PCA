@@ -4,6 +4,9 @@ import com.project.educapp.model.Student;
 import com.project.educapp.model.dto.StudentDTO;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class StudentMapper {
 
@@ -33,6 +36,11 @@ public class StudentMapper {
         dto.setRegistration(student.getRegistration());
 
         return dto;
+    }
 
+    public List<StudentDTO> toDTO(List<Student> studentList) {
+        return studentList.stream()
+                .map(this::toDTO)
+                .collect(Collectors.toList());
     }
 }

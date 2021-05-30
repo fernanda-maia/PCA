@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/student")
@@ -23,7 +24,22 @@ public class StudentController {
     }
 
     @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<StudentDTO> update(@Valid @RequestBody StudentDTO newData) {
-        return ResponseEntity.ok(newData);
+    public ResponseEntity<StudentDTO> update(@Valid @RequestBody StudentDTO dto) {
+        return ResponseEntity.ok(service.update(dto));
+    }
+
+    @DeleteMapping(consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<StudentDTO> delete(@RequestBody StudentDTO dto) {
+        return ResponseEntity.ok(service.delete(dto));
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<StudentDTO>> findAll() {
+        return ResponseEntity.ok(service.findAll());
+    }
+
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<StudentDTO> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.findById(id));
     }
 }
